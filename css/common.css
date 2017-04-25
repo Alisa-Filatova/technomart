@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "Cuprum", "PT Sans", sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,400i,700,700i");
+  font-weight: 400, 700;
+  font-style: normal, italic;
+}
+
+@font-face {
+    font-family: 'PT Sans Narrow', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic,cyrillic-ext');
+    font-weight: 400, 700;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/cuprum-bold-webfont.eot");
+  src: url("../fonts/cuprum-bold-webfont.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/cuprumbold.woff2") format("woff2"),
+  url("../fonts/cuprumbold.woff") format("woff"),
+  url("../fonts/Cuprum-Bold.ttf") format("truetype");
+}
+
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../fonts/cuprum-bolditalic-webfont.eot");
+  src: url("../fonts/cuprum-bolditalic-webfont.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+  url("../fonts/cuprumbolditalic.woff") format("woff"),
+  url("../fonts/Cuprum-Bolditalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../fonts/cuprum-italic-webfont.eot");
+  src: url("../fonts/cuprum-italic-webfont.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/cuprumitalic.woff2") format("woff2"),
+  url("../fonts/cuprumitalic.woff") format("woff"),
+  url("../fonts/Cuprum-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/cuprum-regular-webfont.eot");
+  src: url("../fonts/cuprum-regular-webfont.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/cuprumregular.woff2") format("woff2"),
+  url("../fonts/cuprumregular.woff") format("woff"),
+  url("../fonts/Cuprum-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/pts55f-webfont.eot");
+  src: url("../fonts/pts55f-webfont.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/ptsans.woff2") format("woff2"),
+  url("../fonts/ptsans.woff") format("woff"),
+  url("../fonts/PTC55F.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/pts75f-webfont.eot");
+  src: url("../fonts/pts75f-webfont.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/ptsansbold.woff2") format("woff2"),
+  url("../fonts/ptsansbold.woff") format("woff"),
+  url("../fonts/PTC75Ft.ttf") format("truetype");
+}
+
+
+body {
+  font-family: "Cuprum", "Arial Narrow", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #fff;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  min-width: 1200px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.container-catalog {
+  width: 700px;
+  margin: 0;
+  float: right;
+}
+
+
+
+
+
+

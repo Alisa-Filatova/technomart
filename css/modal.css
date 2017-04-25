@@ -1,0 +1,207 @@
+/*Modal windows*/
+
+
+.modal-post-form {
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 620px;
+  margin-top: -280px;
+  margin-left: -280px;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+  z-index: 50;
+  border-top: 7px solid #ee3643;
+  overflow: hidden;
+}
+
+.form-fields {
+  width: 468px;
+  margin: 0 auto;
+  margin-top: 45px;
+  margin-bottom: 35px;
+  overflow: hidden;
+}
+
+.modal-post-form ul {
+  list-style: none;
+  padding: 0; 
+}
+
+.modal-post-form li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.modal-post-form input {
+  width: 213px;
+  padding: 10px 6px;
+  border: none;
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.modal-post-form input:invalid {
+  border-color: #ee3643;
+}
+
+.modal-post-form textarea {
+  margin: 0 auto;
+  font-size: 13px;
+  border: none;
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+  width: 440px;
+  padding: 8px;
+  padding-bottom: 0;
+}
+
+.modal-post-form .button-post {
+  background: #f1f1f1;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+}
+
+.button-post input {
+  border: none;
+  border-radius: 3px;
+  width: 460px;
+  padding: 5px;
+  text-align: center;
+  line-height: 30px;
+  font-family: "Cuprum", sans-serif;
+  font-size: 17px;
+  margin: 0 auto;
+  display: inherit;
+  cursor: pointer;
+}
+
+.modal-post-form .close-cross {
+  width: 22px;
+  height: 22px;
+  background: transparent;
+  background-image: url(../img/cross.png);
+  border: none;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.modal-post-form .close-cross:hover {
+  opacity: 0.5;
+}
+
+.modal-post-form .close-cross:active {
+  opacity: 0.2;
+}
+
+.modal-post-form .close-cross:hover {
+  opacity: 0.5;
+}
+
+.modal-post-form .close-cross:active {
+  opacity: 0.2;
+}
+
+@keyframes bounce {
+  0% { 
+    transform: translateY(-1000px); 
+}
+  70% { 
+    transform: translateY(30px);  
+}
+  90% { 
+    transform: translateY(-10px); 
+}
+  100% { 
+    transform: translateY(0); 
+}   
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+}
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+}
+
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+}
+}
+
+.modal-post-form-error {
+  animation: shake 0.6s;
+}
+
+.modal-post-form {
+  display: none;
+}
+
+.modal-post-form-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-content-map {
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 940px;
+  height: 446px;
+  margin-top: -280px;
+  margin-left: -464px;
+  background: url(../img/google-map.png);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+  z-index: 50;
+}
+
+.modal-content-close {
+  width: 22px;
+  height: 22px;
+  background: transparent;
+  background-image: url(../img/cross.png);
+  border: none;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: absolute;
+  top: 38px;
+  right: 20px;
+}
+
+.modal-content-map {
+  display: none;
+}
+
+.modal-content-map-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal-overlay {
+  display: none;
+}
+
+.modal-overlay-show {
+  display: block;
+}
+

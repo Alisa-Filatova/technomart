@@ -1,0 +1,409 @@
+
+.btn-services {
+  width: 134px;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  line-height: 37px;
+  padding-top: 3px;
+}
+
+.btn-services:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-services:active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.services {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background: #fff;
+}
+
+.services .services-item {
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  width: 237px;
+  position: relative;
+  background-color: #f6b22d;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-right: 43px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.services .materials {
+  margin-left: 0;
+}
+
+.services .tools {
+  background-color: #4aafde;
+}
+
+.services .device {
+  background-color: #cc79d1;
+}
+
+.services .discount {
+  background-color: #85d179;
+}
+
+.services-item i {
+  background: url(../img/spritesheet.png) no-repeat;
+  display: inline-block;
+  width: 44px;
+  height: 65px;
+  background-position: 0px -98px;
+  position: absolute;
+  top: 33px;
+  right: 49px;
+}
+
+.tools i {
+  width: 75px;
+  height: 61px;
+  background-position: -184px 0px;
+  position: absolute;
+  top: 39px;
+  right: 28px;
+}
+
+.device i {
+  width: 78px;
+  height: 62px;
+  background-position: -95px -26px;
+  top: 39px;
+  right: 32px;
+}
+
+
+.discount i {
+  width: 59px;
+  height: 72px;
+  background-position: -27px 0px;
+  top: 32px;
+  right: 50px;
+}
+
+.delivery i {
+  width: 78px;
+  height: 63px;
+  background-position: -54px -98px;
+  top: 39px;
+  right: 36px;
+}
+
+.services .slider {
+  position: relative;
+  float: left;
+  width: 564px;
+  height: 258px;
+  padding: 4px 28px;
+  background: url(../img/slide1.jpg) no-repeat; 
+}
+
+.services .slider .title {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+} 
+
+.services .slider p {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+} 
+
+.slider a {
+  float: left;
+  margin-top: 118px;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 125px;
+  width: 28px;
+  height: 28px;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff; 
+  border-top: transparent;
+  border-left: transparent;
+  transform: rotate(137deg);
+  cursor: pointer;
+}
+
+.slider .right {
+  left: 565px;
+  transform: rotate(315deg);
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0.1;
+}
+  10% {
+    opacity: 0.2
+}
+  30% {
+    opacity: 0.3
+}
+  50% {
+    opacity: 0.5
+}
+  70% {
+    opacity: 0.7
+}
+  90% {
+    opacity: 0.9
+}
+  100% {
+    opacity: 1;
+}    
+}
+
+.services .slider:hover {
+  background: url(../img/slider2.jpg) no-repeat;
+  animation: slide 0.5s;
+  transition: animation 0.8s;
+}
+
+.services .new::after {
+  content: url(../img/new-flag.png);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 21;
+}
+
+.popular-brands {
+  background: #fff;
+}
+
+.popular-brands .title h3 {
+  margin: 0;
+  line-height: 49px;
+  float: left;
+} 
+
+.popular-brands .title {
+  background: #f7f3ec;
+  padding: 20px 30px;
+}
+
+.popular-brands .title a {
+  float: right;
+}
+
+.popular-brands .brands-table {
+  display: table;
+  border-spacing: 20px;
+  padding: 0;
+  padding-bottom: 85px;
+  margin: 0 -20px;
+}
+
+.popular-brands .row {
+  display: table-row;
+  border: 1px solid #e7e7e7;
+}
+
+.popular-brands .cell {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 220px;
+  height: 145px;
+  border: 1px solid #e7e7e7;
+  cursor: pointer;
+}
+
+.popular-brands .brands-table .cell:hover {
+  border: none;
+  box-shadow: 0 5px 20px 5px #b4b8bf;
+  transition-duration: 1s;
+  transition-property: box-shadow; 
+}
+
+.popular-brands .brands-table .cell:active {
+  box-shadow: 0 5px 10px 5px #b4b8bf;
+  opacity: 0.5;
+  transform: scale(0.8);
+}
+
+.delivery-service {
+  background: #f2f6f8;
+  z-index: 20;
+  padding: 0;
+  margin: 0;
+}
+
+.about-services {
+  padding-top: 40px;
+  padding-bottom: 63px;
+  background-image: url(../img/delivery.png);
+  background-repeat: no-repeat;
+  background-position: 471px 283px;
+}
+
+.delivery-service p, 
+.contacts p {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #000;
+}
+
+.delivery-service .service h3,
+.contacts h3 {
+  color: #000;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+.delivery-service .delivery h3 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.delivery-service .service {
+  float: left;
+  display: block;
+}
+
+.delivery-service .delivery {
+  display: block;
+  float: left;
+  min-height: 183px;
+}
+
+.delivery-service .delivery-text {
+  float: left;
+  display: inline-block;
+  margin-top: 24px;
+  margin-left: 80px;
+}
+
+.delivery-service ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.delivery-service a {
+  text-decoration: none;
+  background: #32425c;
+  color: #fff;
+  font-size: 21px;
+  font-weight: bold;
+  padding: 20px 20px;
+  padding-right: 129px;
+  display: inline-block;
+}
+
+.delivery-service .last-row {
+  padding-right: 146px;
+}
+
+.delivery-service .active a {
+  color: #32425c;
+  background: #fff;
+  border: none;
+}
+
+.delivery-service .active a:hover {
+  color: #32425c;
+  background: #fff;
+  border: none;
+}
+
+.delivery-service a:hover {
+  background: #293449;
+}
+
+.delivery-service a:active {
+  color: #32425c;
+  background: #fff;
+  border: none;
+}
+
+.delivery-service a {
+  border-bottom: 1px solid #293449;
+  border-top: 1px solid #405069;
+}
+
+.contacts {
+  padding-top: 40px;
+  padding-bottom: 86px;
+  background: #fff;
+}
+
+.contacts .about-us {
+  position: relative;
+  float: left;
+  width: 553px;
+  padding: 0;
+  margin: 0;
+}
+
+.contacts .address {
+  float: right;
+  width: 300px;
+  padding: 0;
+  margin: 0;
+}
+
+.about-us ul {
+  list-style: none;
+  color: #000;
+  font-size: 18px;
+  font-family: "Cuprum",sans-serif;
+  font-weight: 500;
+  line-height: 40px;
+  margin-bottom: 25px;
+  padding-left: 0;
+}
+
+.contacts img {
+  margin-top: 20px;
+  margin-bottom: 40px;
+} 
+
+.about-us p {
+  margin-bottom: 25px;
+}
+
+.ul-list li::before {
+  content: " ";
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  background: #fb565a;
+}
+
+.contacts .ul-title {
+  margin-bottom: 17px;
+}
+
+
+
+
+
+
+
+
+
+

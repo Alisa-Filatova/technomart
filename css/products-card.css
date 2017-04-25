@@ -1,0 +1,178 @@
+.popular-items {
+  background: #fff;
+}
+
+.popular-items .title h3 {
+  margin: 0;
+  line-height: 49px;
+  float: left;
+} 
+
+.popular-items .title {
+  background: #f7f3ec;
+  padding: 20px 30px;
+}
+
+.popular-items .title a {
+  float: right;
+}
+
+.catalog-items {
+  margin: 20px auto;
+  position: relative;
+}
+
+.item .actions {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 218px;
+  height: 88px;
+  padding: 40px 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 20;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.item .actions .buy,
+.item .actions .bookmark {
+  display: block;
+  width: 129px;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  padding: 7px 0;
+  border: 3px solid #63a63e;
+  border-bottom-color: #367315;
+  background-color: #63a63e;
+  color: #fff;
+  font-family: "Cuprum", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.item .actions .bookmark {
+  color: #32425c;
+  background: #fff;
+  border-bottom-color: #63a63e;
+}
+
+.actions .buy::before {
+  content: " ";
+  width: 17px;
+  height: 16px;
+  background-image: url(../img/spritesheet.png); 
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: 100;
+  display: inline-block;
+  position: relative;
+  left: -18px;
+  bottom: -2px;
+  opacity: 0.3;
+}
+
+.actions .buy:hover::before {
+  opacity: 1;
+}
+
+.item .actions .bookmark:hover {
+  border: 3px solid #32425c;
+}
+
+.item .actions .bookmark:active {
+  border: 3px solid #32425c;
+  opacity: 0.3;
+}
+
+.item .actions .buy:hover {
+  background-color: #5fbb2d;
+}
+
+.item .actions .buy:active {
+  background-color: #518534;
+  border-color: #518534;
+}
+
+.item:hover .actions {
+  opacity: 1;
+}
+
+.catalog-items .item {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 218px;
+  margin-right: 15px;
+  border: 1px solid #ccc;
+  line-height: 20px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  z-index: 10;
+}
+
+.item .last-child {
+  margin-right: 0;
+}
+
+ .btn-price {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ee3643;
+  color: #fff;
+  padding: 10px 35px; 
+  margin-bottom: 20px;
+  margin-top: 12px;
+  border-radius: 3px;
+  font-family: "PT Sans Narrow", "PT Sans", sans-serif;
+}
+
+.btn-price::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: -21px;
+  width: 0;
+  height: 0;
+  border: 20px solid #fff;
+  border-left-color: #ee3643;  
+}
+
+.catalog-items .item .item-name {
+  margin: 19px;
+  margin-bottom: 9px;
+}
+
+.catalog-items .item .old-price {
+  color: #999;
+  text-decoration: line-through;
+  font-family: "PT Sans Narrow", "PT Sans", sans-serif;
+}
+
+.catalog-items .last-child {
+  margin-right: 0;
+}
+
+.catalog-items .new::after {
+  content: url(../img/new-flag.png);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 21;
+}
+
+.catalog-items .item-img {
+  width: 218px;
+  height: 168px;
+}
+
+.catalog-items .item-img {
+  max-width: 100%;
+}
