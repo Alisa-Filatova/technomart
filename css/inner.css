@@ -369,6 +369,16 @@ button[type="submit"] {
   cursor: pointer;
 }
 
+button[type="submit"]:hover {
+  opacity: 0.5;
+  transition: all 0.3s;
+
+}
+
+button[type="submit"]:active {
+  opacity: 0.2;
+}
+
 .products-catalog .item {
   font-family: "PT Sans", sans-serif;
   font-weight: bold;
