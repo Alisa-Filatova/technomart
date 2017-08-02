@@ -11,7 +11,7 @@ $(function() {
         max: 30000,
         values: [2500, 20000],
         slide: function(event, ui) {
-            $('#amount').val(ui.values[ 0 ] + 'р' + ' - ' + ui.values[1] + 'р');
+            $('#amount').val(ui.values[0] + 'р' + ' - ' + ui.values[1] + 'р');
         }
     });
 
