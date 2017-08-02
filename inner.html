@@ -106,38 +106,22 @@
             
             <form action="" method="" class="filter-form">
                 <div class="form-title">Фильтр:</div>
-                <span class="range-title">Цена:</span>
-                 
-                <div class="range-filter">
-                    <div class="range-controls">
-                        <div class="scale">
-                            <div style="width:72%;" class="bar"></div>
-                        </div>
-                        <div class="toggle min-toggle"></div>
-                        <div class="toggle max-toggle"></div>
-                    </div>
-                   
-                    <div class="container clearfix">
-                        <div class="price-controls">
-                            <input 
-                                class="min-price" 
-                                id="min-price" 
-                                name="min-price" 
-                                type="text" 
-                                value="0"
-                            >
-                            <span> - </span>
-                            <input 
-                                class="max-price" 
-                                id="max-price" 
-                                name="max-price" 
-                                type="text" 
-                                value="30 000"
-                            >
-                        </div>
-                    </div> 
+
+                <div class="price-controls">
+                    <label for="amount" class="filter range-title">ЦЕНА:</label>
+                    <input
+                        id="amount"
+                        class="max-price"
+                        name="max-price"
+                        type="text"
+                        readonly
+                    >
                 </div>
-                
+
+                <div class="range-filter">
+                    <div id="slider-range"></div>
+                </div>
+
                 <div class="checkbox-title">Производители:</div>
                 <ul class="checkbox-filter">
                     <li>
@@ -492,5 +476,8 @@
             </div>
         </div>
     </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/range-filter.js"></script>
 </body>
 </html>

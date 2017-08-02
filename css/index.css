@@ -251,15 +251,13 @@
 .about-services {
   padding-top: 40px;
   padding-bottom: 63px;
-  background-image: url(../img/delivery.png);
-  background-repeat: no-repeat;
-  background-position: 471px 283px;
+  background: url('../img/delivery.png') no-repeat 471px 283px;
 }
 
 .delivery-service p, 
 .contacts p {
   font-family: "PT Sans", sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   color: #000;
