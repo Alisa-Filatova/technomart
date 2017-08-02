@@ -17,7 +17,7 @@
     <header class="main-header">
         <div class="navigation">
             <nav class="user-nav container clearfix">
-                <a class="main-logo">Техномарт</a>
+                <a class="main-logo" href="index.html">Техномарт</a>
      
                 <div class="search-field">
                     <input type="search" name="search" placeholder="Поиск">
@@ -70,11 +70,11 @@
                     <ul class="main-nav-ul">
                         <li><a href="#">Главная</a></li>
                         <li><a href="#Company">Компания</a></li>
-                        <li><a href="inner.html#">Каталог</a></li>
+                        <li><a href="inner.html">Каталог</a></li>
                         <li><a href="#">Новости</a></li>
                         <li><a href="#">Спецпредложения</a></li>
                         <li><a href="#delivery">Доставка</a></li>
-                        <li><a href="#Company">Контакты</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
@@ -102,11 +102,20 @@
             </div>
 
             <div class="slider">
-                <i class="slider-controls left"></i> 
-                <h2 class="title">Перфораторы</h2>
-                <p>Настоящие мужские игрушки</p>
-                <i class="slider-controls right"></i>
-                <a href="inner.html#" class="btn">Открыть каталог</a>
+                <i class="slider-controls-left"></i>
+                <ul class="slide-list">
+                    <li class="slide slide-first">
+                        <h2 class="title">Перфораторы</h2>
+                        <p>Настоящие мужские игрушки</p>
+                        <a href="inner.html" class="btn">Открыть каталог</a>
+                    </li>
+                    <li class="slide slide-last">
+                        <h2 class="title">Дрели</h2>
+                        <p>Соседи будут довольны</p>
+                        <a href="inner.html" class="btn">Открыть каталог</a>
+                    </li>
+                </ul>
+                <i class="slider-controls-right"></i>
             </div>
 
             <div class="services-item discount">
@@ -125,7 +134,7 @@
         <section class="popular-items container clearfix">
             <div class="title clearfix">
                 <h3>Популярные товары:</h3>
-                <a href="inner.html#" class="btn">Все популярные товары</a>
+                <a href="inner.html" class="btn">Все популярные товары</a>
             </div>
 
             <div class="catalog-items">
@@ -369,7 +378,7 @@
             </div>
 
             <div class="modal-post-form">
-                <form action="URL" method="post">
+                <form action="" method="">
                     <button class="close-cross" type="button" value="close"></button>
                     <div class="form-fields">
                         <ul>
@@ -427,23 +436,23 @@
                     <ul class="top-nav">
                         <li><a href="#Company">Компания</a></li>
                         <li><a href="#">Новости</a></li>
-                        <li><a href="inner.html#">Каталог</a></li>
-                        <li><a href="delivery#">Доставка</a></li>
-                        <li><a href="contacts#">Контакты</a></li>
+                        <li><a href="inner.html">Каталог</a></li>
+                        <li><a href="#delivery">Доставка</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
                     </ul>
 
                     <ul class="bottom-nav">
-                        <li><a href="#index.html">Материалы</a></li>
-                        <li><a href="#index.html">Техника</a></li>
-                        <li><a href="#index.html">Инструмент</a></li>
-                        <li><a href="#index.html">Спецпредложения</a></li>
+                        <li><a href="index.html">Материалы</a></li>
+                        <li><a href="index.html">Техника</a></li>
+                        <li><a href="index.html">Инструмент</a></li>
+                        <li><a href="index.html">Спецпредложения</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </footer>
     
-    <footer class="footer-bottom">
+    <footer class="footer-bottom" id="contacts">
         <div class="container clearfix">
             <div class="footer-bottom-menu clearfix">
                 <div class="copyright">
@@ -470,8 +479,8 @@
                 </div>
 
                 <div class="developers">
-                    <p><a href="http://alicedesign.ru/">Alisa Filatova</a> for </p>
-                    <a href="https://htmlacademy.ru">htmlacademy.ru</a>
+                    <p><a href="http://alicedesign.ru/" target="_blank">Alisa Filatova</a> for </p>
+                    <a href="https://htmlacademy.ru" target="_blank">htmlacademy.ru</a>
                 </div>
 
                 <div class="e-mail">
@@ -481,7 +490,9 @@
             </div>
         </div>
     </footer>
-    
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/slider.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>

@@ -19,9 +19,7 @@
 
 .form-fields {
   width: 468px;
-  margin: 0 auto;
-  margin-top: 45px;
-  margin-bottom: 35px;
+  margin: 45px auto 35px;
   overflow: hidden;
 }
 
@@ -169,7 +167,7 @@
   height: 446px;
   margin-top: -280px;
   margin-left: -464px;
-  background: url(../img/google-map.png);
+  background: url('../img/google-map.png');
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
   z-index: 50;
 }
@@ -177,10 +175,10 @@
 .modal-content-close {
   width: 22px;
   height: 22px;
-  background: transparent;
-  background-image: url(../img/cross.png);
-  border: none;
+  background-color: transparent;
+  background-image: url('../img/cross.png');
   background-repeat: no-repeat;
+  border: none;
   cursor: pointer;
   position: absolute;
   top: 38px;

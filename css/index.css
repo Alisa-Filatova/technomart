@@ -30,10 +30,7 @@
   width: 237px;
   position: relative;
   background-color: #f6b22d;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-top: 5px;
-  padding-right: 43px;
+  padding: 5px 43px 20px 20px;
   margin-left: 20px;
   margin-bottom: 20px;
 }
@@ -55,11 +52,10 @@
 }
 
 .services-item i {
-  background: url(../img/spritesheet.png) no-repeat;
+  background: url('../img/spritesheet.png') no-repeat 0 -98px;
   display: inline-block;
   width: 44px;
   height: 65px;
-  background-position: 0px -98px;
   position: absolute;
   top: 33px;
   right: 49px;
@@ -68,7 +64,7 @@
 .tools i {
   width: 75px;
   height: 61px;
-  background-position: -184px 0px;
+  background-position: -184px 0;
   position: absolute;
   top: 39px;
   right: 28px;
@@ -86,7 +82,7 @@
 .discount i {
   width: 59px;
   height: 72px;
-  background-position: -27px 0px;
+  background-position: -27px 0;
   top: 32px;
   right: 50px;
 }
@@ -105,29 +101,66 @@
   width: 564px;
   height: 258px;
   padding: 4px 28px;
-  background: url(../img/slide1.jpg) no-repeat; 
+  z-index: 5;
+  overflow: hidden;
 }
 
-.services .slider .title {
+.services .slide-list {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+  list-style: none;
+}
+
+.services .slider .slide {
+  z-index: 10;
+  width: 620px;
+  height: 266px;
+  vertical-align: middle;
+  position: absolute;
+  padding-left: 20px;
+  transition: 1.5s ease;
+}
+
+.services .slider .slide-first {
+  background: url('../img/slide1.jpg') no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+}
+
+.services .slider .slide-last {
+  background: url('../img/slider2.jpg') no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 620px;
+}
+
+.services .slide .title {
   font-size: 36px;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 12px;
+  z-index: 15;
 } 
 
-.services .slider p {
+.services .slide p {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: normal;
   margin: 0;
+  z-index: 15;
 } 
 
-.slider a {
+.slide a {
   float: left;
   margin-top: 118px;
+  z-index: 50;
 }
 
-.slider-controls {
+.slider-controls-left,
+.slider-controls-right {
   position: absolute;
   top: 125px;
   width: 28px;
@@ -138,45 +171,16 @@
   border-left: transparent;
   transform: rotate(137deg);
   cursor: pointer;
+  z-index: 50;
 }
 
-.slider .right {
+.slider-controls-right {
   left: 565px;
   transform: rotate(315deg);
 }
 
-@keyframes slide {
-  0% {
-    opacity: 0.1;
-}
-  10% {
-    opacity: 0.2
-}
-  30% {
-    opacity: 0.3
-}
-  50% {
-    opacity: 0.5
-}
-  70% {
-    opacity: 0.7
-}
-  90% {
-    opacity: 0.9
-}
-  100% {
-    opacity: 1;
-}    
-}
-
-.services .slider:hover {
-  background: url(../img/slider2.jpg) no-repeat;
-  animation: slide 0.5s;
-  transition: animation 0.8s;
-}
-
 .services .new::after {
-  content: url(../img/new-flag.png);
+  content: url('../img/new-flag.png');
   position: absolute;
   top: 0;
   right: 0;
@@ -223,13 +227,12 @@
   height: 145px;
   border: 1px solid #e7e7e7;
   cursor: pointer;
+  transition: all 0.5s linear;
 }
 
 .popular-brands .brands-table .cell:hover {
   border: none;
   box-shadow: 0 5px 20px 5px #b4b8bf;
-  transition-duration: 1s;
-  transition-property: box-shadow; 
 }
 
 .popular-brands .brands-table .cell:active {
