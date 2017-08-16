@@ -1,0 +1,101 @@
+[{
+    "title": "BOSCH-BFG-3000",
+    "image": "img/catalog/snippet-1.png",
+    "brand": "BOSCH",
+    "model": "BFG 3000",
+    "price": "15500",
+    "oldPrice": "22500",
+    "new": false,
+    "power": "mains-supply"
+  },
+
+  {
+    "title": "BOSCH-BFG-6000",
+    "image": "img/catalog/snippet-2.png",
+    "brand": "BOSCH",
+    "model": "BFG 6000",
+    "price": "25500",
+    "oldPrice": "30500",
+    "new": false,
+    "power": "battery"
+  },
+
+  {
+    "title": "BOSCH-BFG-2000",
+    "image": "img/catalog/snippet-3.png",
+    "brand": "BOSCH",
+    "model": "BFG 2000",
+    "price": "11500",
+    "oldPrice": "12500",
+    "new": true,
+    "power": "battery"
+  },
+
+  {
+    "title": "Hitachi-BFG-8000",
+    "image": "img/catalog/snippet-1.png",
+    "brand": "Hitachi",
+    "model": "BFG 8000",
+    "price": "25500",
+    "oldPrice": "15500",
+    "new": false,
+    "power": "mains-supply"
+  },
+
+  {
+    "title": "BOSCH-MFG-3000",
+    "image": "img/catalog/snippet-2.png",
+    "brand": "BOSCH",
+    "model": "MFG 3000",
+    "price": "15500",
+    "oldPrice": "18500",
+    "new": true,
+    "power": "battery"
+  },
+
+  {
+    "title": "BOSCH-BFG-9000",
+    "image": "img/catalog/snippet-3.png",
+    "brand": "BOSCH",
+    "model": "BFG 9000",
+    "price": "12500",
+    "oldPrice": "12500",
+    "new": false,
+    "power": "mains-supply"
+  },
+
+  {
+    "title": "MAKITA-LPG-1000",
+    "image": "img/catalog/snippet-1.png",
+    "brand": "MAKITA",
+    "model": "LPG 1000",
+    "price": "14500",
+    "oldPrice": "24000",
+    "new": true,
+    "power": "battery"
+  },
+
+  {
+    "title": "BOSCH-BFG-4000",
+    "image": "img/catalog/snippet-2.png",
+    "brand": "BOSCH",
+    "model": "BFG 4000",
+    "price": "25500",
+    "oldPrice": "30500",
+    "new": false,
+    "power": "battery"
+  },
+
+  {
+    "title": "Interskol-BFG-2100",
+    "image": "img/catalog/snippet-3.png",
+    "brand": "Интерскол",
+    "model": "BFG 2100",
+    "price": "10500",
+    "oldPrice": "21500",
+    "new": false,
+    "power": "mains-supply"
+  }
+]
+
+ 

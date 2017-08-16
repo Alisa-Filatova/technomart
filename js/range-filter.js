@@ -8,7 +8,7 @@ $(function() {
     $rangeFilter.slider({
         range: true,
         min: 0,
-        max: 30000,
+        max: 35000,
         values: [2500, 20000],
         slide: function(event, ui) {
             $('#amount').val(ui.values[0] + 'р' + ' - ' + ui.values[1] + 'р');

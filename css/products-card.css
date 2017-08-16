@@ -17,9 +17,13 @@
   float: right;
 }
 
-.catalog-items {
+.items {
   margin: 20px auto;
   position: relative;
+}
+
+.item {
+  margin-bottom: 20px;
 }
 
 .item .actions {
@@ -102,7 +106,7 @@
   opacity: 1;
 }
 
-.catalog-items .item {
+.items .item {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -145,22 +149,22 @@
   border-left-color: #ee3643;  
 }
 
-.catalog-items .item .item-name {
+.items .item .item-name {
   margin: 19px;
   margin-bottom: 9px;
 }
 
-.catalog-items .item .old-price {
+.items .item .old-price {
   color: #999;
   text-decoration: line-through;
   font-family: "PT Sans Narrow", "PT Sans", sans-serif;
 }
 
-.catalog-items .last-child {
+.items div:nth-child(3n+3) {
   margin-right: 0;
 }
 
-.catalog-items .new::after {
+.items .new::after {
   content: url(../img/new-flag.png);
   position: absolute;
   top: 0;
@@ -168,11 +172,20 @@
   z-index: 21;
 }
 
-.catalog-items .item-img {
+.items .item-img {
   width: 218px;
   height: 168px;
 }
 
-.catalog-items .item-img {
+.items .item-img {
   max-width: 100%;
+}
+
+.item span {
+  margin: 0;
+}
+
+.item .btn-price {
+  margin-bottom: 20px;
+  margin-top: 12px;
 }
