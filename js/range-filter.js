@@ -9,15 +9,17 @@ $(function() {
         range: true,
         min: 0,
         max: 35000,
-        values: [2500, 20000],
+        step: 100,
+        values: [5100, 32500],
         slide: function(event, ui) {
-            $('#amount').val(ui.values[0] + 'р' + ' - ' + ui.values[1] + 'р');
+            for (var i = 0; i < ui.values.length; ++i) {
+                $('input.sliderValue[data-index=' + i + ']').val(ui.values[i]);
+            }
         }
     });
 
-    var value = $rangeFilter.slider('values', 0) + 'р'
-                + ' - ' +
-                $rangeFilter.slider('values', 1) + 'р';
-
-    $('#amount').val(value);
+    $('input.sliderValue').change(function() {
+        var $this = $(this);
+        $rangeFilter.slider('values', $this.data('index'), $this.val());
+    });
 });

@@ -108,14 +108,24 @@
                 <div class="form-title">Фильтр:</div>
 
                 <div class="price-controls">
-                    <label for="amount" class="filter range-title">ЦЕНА:</label>
-                    <input
-                        id="amount"
-                        class="max-price"
-                        name="max-price"
-                        type="text"
-                        readonly
+                    <label for="max-price" class="filter range-title">ЦЕНА:</label>
+
+                    <input 
+                        type="text" 
+                        class="sliderValue" 
+                        id="min-price" 
+                        data-index="0" 
+                        value="5100"
                     >
+                    —
+                    <input 
+                        type="text" 
+                        class="sliderValue" 
+                        id="max-price" 
+                        data-index="1" 
+                        value="32500"
+                    >
+                   
                 </div>
 
                 <div class="range-filter">
@@ -140,6 +150,7 @@
                            name="interskol" 
                            value="Интерскол" 
                            id="interskol"
+                           checked
                        >
                        <label for="interskol"><span></span>Интерскол</label>
                     </li>
@@ -156,11 +167,12 @@
                     <li>
                         <input 
                             type="checkbox" 
-                            name="dewalt" 
-                            value="dewalt" 
-                            id="dewalt"
+                            name="DEWALT" 
+                            value="DEWALT" 
+                            id="DEWALT"
+                            checked
                         >
-                        <label for="dewalt"><span></span>Dewalt</label>
+                        <label for="DEWALT"><span></span>Dewalt</label>
                     </li>
                     <li>
                         <input 
@@ -168,6 +180,7 @@
                             name="hitachi" 
                             value="Hitachi" 
                             id="hitachi"
+                            checked
                         >
                         <label for="hitachi"><span></span>Hitachi</label>
                     </li>
@@ -181,7 +194,6 @@
                             name="power" 
                             value="battery" 
                             id="battery" 
-                            checked
                         >
                         <label for="battery"><span></span>Аккумуляторные</label>
                     </li>
@@ -193,6 +205,16 @@
                             id="mains-supply"
                         >
                         <label for="mains-supply"><span></span>Сетевые</label>
+                    </li>
+                    <li>
+                        <input 
+                            type="radio" 
+                            name="power" 
+                            value="any" 
+                            id="any"
+                            checked
+                        >
+                        <label for="any"><span></span>Любые</label>
                     </li>
                 </ul>
            
@@ -206,9 +228,9 @@
                     <nav class="products-filter-nav">
                         <span class="title">Сортировка:</span>
                         <ul>
-                            <li><a href="#" class="active filter-price">По цене</a></li>
-                            <li><a class="filter-type" href="#">По типу</a></li>
-                            <li><a class="filter-function" href="#">По функционалу</a></li>
+                            <li><a href="#" class="filter-price">По цене</a></li>
+                            <li><a class="filter-new" href="#">Новинки</a></li>
+                            <li><a class="filter-sale" href="#">Скидки</a></li>
                         </ul>
                     </nav>
                 <div class="items"></div>
