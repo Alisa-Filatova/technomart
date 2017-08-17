@@ -399,6 +399,14 @@
   margin-bottom: 17px;
 }
 
+.items div:nth-child(4n+4) {
+  margin-right: 0;
+}
+
+.items div:nth-child(3n+3) {
+  margin-right: 15px;
+}
+
 
 
 

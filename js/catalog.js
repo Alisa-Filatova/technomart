@@ -1,8 +1,7 @@
-var MAX_ITEMS = 9;
 var RUB = ' &#8381';
 
 var dataUrl = 'data/items.json';
-var $catalog = $('.items');
+var $catalog = $('#items-catalog');
 
 /**
  * Создает разметку товара
@@ -64,6 +63,10 @@ $filterBtn.on('click', function(event) {
         });
        
         $catalog.empty();
+
+        if ($filterPrice.hasClass('active')) {
+            sortItemsByPrice(data);
+        }
         
         $.each(data, function(index, item) {
             
@@ -92,20 +95,56 @@ $filterBtn.on('click', function(event) {
 // Cортировка товаров
 
 var $filterPrice = $('.filter-price');
-var $filterType = $('.filter-price');
-var $filterFunction = $('.filter-function');
+var $filterNew = $('.filter-new');
+var $filterSale = $('.filter-sale');
 
-function sortPrice(small, big) {
-    return small - big;
-}
-
-var $price = $.map($('.btn-price'), function(el) {
-    return parseInt($(el).text()); 
-});
-
-console.log($price.sort(sortPrice));
+function sortItemsByPrice(array) {
+    array.sort(function (min, max) {
+        return min.price - max.price;
+    });
+};
 
 $filterPrice.on('click', function(event) {
     event.preventDefault;
 
+    $(this).addClass('active')
+            .siblings('a')
+            .removeClass('active');
+    
+    $catalog.empty();
+    
+    $.getJSON(dataUrl).done(function(data) {
+        var power = $('input[type=radio]:checked').val();
+        var maxPrice = $maxPrice.val();
+        var minPrice = $minPrice.val();
+
+        var $checkedBrands = $('input[type=checkbox]:checked');
+
+        var brands = $.map($checkedBrands, function(element) {
+            return element.value; 
+        });
+
+        sortItemsByPrice(data);
+
+        $.each(data, function(index, item) {
+            if (power === item.power 
+                && brands.indexOf(item.brand) > -1
+                && item.price <= maxPrice
+                && item.price >= minPrice
+            ) {
+                var itemHtml = createItemHtml(item);
+                $catalog.append(itemHtml);
+            } 
+            if (power === 'any'
+                && brands.indexOf(item.brand) > -1
+                && item.price <= maxPrice
+                && item.price >= minPrice
+            ) {
+                var itemHtml = createItemHtml(item);
+                $catalog.append(itemHtml);
+            }
+        });
+    }).fail(function() { 
+        alert('Ошибка загрузки!'); 
+    })
 });

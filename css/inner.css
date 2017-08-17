@@ -110,6 +110,8 @@
   margin: 0;
   float: right;
   margin-right: 10px;
+  cursor: pointer;
+  
 }
 
 .products-filter-nav li {
@@ -118,12 +120,14 @@
   padding: 3px 0;
   padding-right: 73px;
   padding-bottom: 2px;
+  
 }
 
 .products-filter-nav a {
   text-decoration: none; 
   color: #c9c9c9;
   border-bottom: 1px dotted #ee3643;
+  cursor: pointer;
 }
 
 .products-filter-nav a::after {

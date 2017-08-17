@@ -3,10 +3,11 @@
     "image": "img/catalog/bosch01.png",
     "brand": "BOSCH",
     "model": "BFG 3000",
-    "price": 15500,
+    "price": 7500,
     "oldPrice": 22500,
     "new": false,
-    "power": "mains-supply"
+    "power": "mains-supply",
+    "popular": true
   },
 
   {
@@ -17,7 +18,8 @@
     "price": 21500,
     "oldPrice": 30500,
     "new": false,
-    "power": "battery"
+    "power": "battery",
+    "popular": false
   },
 
   {
@@ -25,10 +27,11 @@
     "image": "img/catalog/bosch03.png",
     "brand": "BOSCH",
     "model": "BFG 2000",
-    "price": 7500,
+    "price": 6500,
     "oldPrice": 12500,
     "new": true,
-    "power": "battery"
+    "power": "battery",
+    "popular": true
   },
 
   {
@@ -50,7 +53,8 @@
     "price": 15500,
     "oldPrice": 22500,
     "new": false,
-    "power": "mains-supply"
+    "power": "mains-supply",
+    "popular": false
   },
 
   {
@@ -61,7 +65,8 @@
     "price": 5500,
     "oldPrice": 12500,
     "new": true,
-    "power": "battery"
+    "power": "battery",
+    "popular": true
   },
 
   {
@@ -72,7 +77,8 @@
     "price": 32500,
     "oldPrice": 35000,
     "new": false,
-    "power": "mains-supply"
+    "power": "mains-supply",
+    "popular": false
   },
 
   {
@@ -83,7 +89,8 @@
     "price": 9500,
     "oldPrice": 35000,
     "new": true,
-    "power": "battery"
+    "power": "battery",
+    "popular": false
   },
 
   {
@@ -94,7 +101,8 @@
     "price": 14500,
     "oldPrice": 24000,
     "new": false,
-    "power": "battery"
+    "power": "battery",
+    "popular": false
   },
 
   {
@@ -105,7 +113,8 @@
     "price": 8500,
     "oldPrice": 10000,
     "new": true,
-    "power": "mains-supply"
+    "power": "mains-supply",
+    "popular": true
   },
 
   {
@@ -116,7 +125,8 @@
     "price": 28500,
     "oldPrice": 30500,
     "new": false,
-    "power": "battery"
+    "power": "battery",
+    "popular": false
   },
 
   {
@@ -127,7 +137,8 @@
     "price": 10500,
     "oldPrice": 21500,
     "new": true,
-    "power": "mains-supply"
+    "power": "mains-supply",
+    "popular": false
   }
 ]
 

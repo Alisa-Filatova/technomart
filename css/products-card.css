@@ -20,6 +20,7 @@
 .items {
   margin: 20px auto;
   position: relative;
+  z-index: 900;
 }
 
 .item {
@@ -165,7 +166,7 @@
 }
 
 .items .new::after {
-  content: url(../img/new-flag.png);
+  content: url('../img/new-flag.png');
   position: absolute;
   top: 0;
   right: 0;
@@ -189,3 +190,4 @@
   margin-bottom: 20px;
   margin-top: 12px;
 }
+
