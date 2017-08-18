@@ -112,7 +112,7 @@
     "model": "L800",
     "price": 8500,
     "oldPrice": 10000,
-    "new": true,
+    "new": false,
     "power": "mains-supply",
     "popular": true
   },
@@ -126,7 +126,7 @@
     "oldPrice": 30500,
     "new": false,
     "power": "battery",
-    "popular": false
+    "popular": true
   },
 
   {
