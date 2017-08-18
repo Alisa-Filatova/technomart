@@ -1,7 +1,5 @@
 var RUB = ' &#8381';
-
 var dataUrl = 'data/items.json';
-var $catalog = $('#items-catalog');
 
 /**
  * Создает разметку товара
@@ -35,11 +33,14 @@ var $popularItems = $('#popular-items');
 
 $(function() {
     $.getJSON(dataUrl).done(function(data) {
-            $.each(data.slice(0, 4), function(index, item) {
-                var itemHtml = createItemHtml(item);
-                $popularItems.append(itemHtml);
+            $.each(data, function(index, item) {
+                if (item.popular === true && $('.item').length <= 3) {
+                    var itemHtml = createItemHtml(item);
+                    $popularItems.append(itemHtml);   
+                } 
             });   
         }).fail(function() { 
         alert('Ошибка загрузки!'); 
     })
 });
+
