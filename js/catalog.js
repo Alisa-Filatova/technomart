@@ -31,6 +31,19 @@ function createItemHtml(item) {
     );
 }
 
+/**
+ * Проверяет, что число входит в диапазон
+ * 
+ * @param {Number} number 
+ * @param {Number} start 
+ * @param {Number} end 
+ *
+ * @returns {Boolean}
+ */
+function inRange(number, start, end) {
+    return number >= start && number <= end;
+}
+
 $(function() {
     $.getJSON(dataUrl).done(function(data) {
         $.each(data, function(index, item) {
@@ -41,6 +54,15 @@ $(function() {
         alert('Ошибка загрузки!'); 
     })
 });
+
+function highlightSortButton($sortButton) {
+    $sortButton
+        .closest('ul')
+        .find('a')
+        .removeClass('active');
+
+    $sortButton.addClass('active');
+}
 
 // Фильтр
 
@@ -63,7 +85,9 @@ function sortItemsByPriceMax(array) {
 $filterBtn.on('click', function(event) {
     event.preventDefault();
     
-    $filterReset.removeClass('active');
+    if ($filterReset.hasClass('active')) {
+        $filterReset.removeClass('active');
+    }
 
     $.getJSON(dataUrl).done(function(data) {
         var power = $('input[type=radio]:checked').val();
@@ -88,24 +112,15 @@ $filterBtn.on('click', function(event) {
 
         $.each(data, function(index, item) {
             
-            if (power === item.power 
+            if ([item.power, 'any'].indexOf(power) > -1
                 && brands.indexOf(item.brand) > -1
-                && item.price <= maxPrice
-                && item.price >= minPrice
-            ) {
-                var itemHtml = createItemHtml(item);
-                $catalog.append(itemHtml);
-            } 
-            if (power === 'any'
-                && brands.indexOf(item.brand) > -1
-                && item.price <= maxPrice
-                && item.price >= minPrice
+                && inRange(item.price, minPrice, maxPrice)
             ) {
                 var itemHtml = createItemHtml(item);
                 $catalog.append(itemHtml);
             }
             if ($filterNew.hasClass('active')) {
-                $catalog.find($('.item').not('.new')).remove();
+                $catalog.find('.item').not('.new').remove();
             }
         });
     }).fail(function() { 
@@ -121,13 +136,12 @@ var $filterNew = $('.filter-new');
 var $filterReset = $('.filter-reset');
 var $filterNav = $('.products-filter-nav');
 
-$filterMinPrice.on('click', function(event) {
+function onClickFilter(event) {
     event.preventDefault;
 
-    $filterNav.find($('a')).removeClass('active');
-    $(this).addClass('active');
-    
-    $catalog.empty();
+    var $this = $(this);
+
+    highlightSortButton($this);
     
     $.getJSON(dataUrl).done(function(data) {
         var power = $('input[type=radio]:checked').val();
@@ -140,21 +154,18 @@ $filterMinPrice.on('click', function(event) {
             return element.value; 
         });
 
-        sortItemsByPriceMin(data);
+        $catalog.empty();
+
+        if ($this.hasClass('filter-max')) {
+            sortItemsByPriceMax(data);
+        } else {
+            sortItemsByPriceMin(data);
+        }
 
         $.each(data, function(index, item) {
-            if (power === item.power 
+            if ([item.power, 'any'].indexOf(power) > -1
                 && brands.indexOf(item.brand) > -1
-                && item.price <= maxPrice
-                && item.price >= minPrice
-            ) {
-                var itemHtml = createItemHtml(item);
-                $catalog.append(itemHtml);
-            } 
-            if (power === 'any'
-                && brands.indexOf(item.brand) > -1
-                && item.price <= maxPrice
-                && item.price >= minPrice
+                && inRange(item.price, minPrice, maxPrice)
             ) {
                 var itemHtml = createItemHtml(item);
                 $catalog.append(itemHtml);
@@ -163,57 +174,17 @@ $filterMinPrice.on('click', function(event) {
     }).fail(function() { 
         alert('Ошибка загрузки!'); 
     })
-});
+}
 
-$filterMaxPrice.on('click', function(event) {
-    event.preventDefault;
-    $filterNav.find($('a')).removeClass('active');
-    $(this).addClass('active');
-    
-    $catalog.empty();
-    
-    $.getJSON(dataUrl).done(function(data) {
-        var power = $('input[type=radio]:checked').val();
-        var maxPrice = $maxPrice.val();
-        var minPrice = $minPrice.val();
-
-        var $checkedBrands = $('input[type=checkbox]:checked');
-
-        var brands = $.map($checkedBrands, function(element) {
-            return element.value; 
-        });
-
-        sortItemsByPriceMax(data);
-
-        $.each(data, function(index, item) {
-            if (power === item.power 
-                && brands.indexOf(item.brand) > -1
-                && item.price <= maxPrice
-                && item.price >= minPrice
-            ) {
-                var itemHtml = createItemHtml(item);
-                $catalog.append(itemHtml);
-            } 
-            if (power === 'any'
-                && brands.indexOf(item.brand) > -1
-                && item.price <= maxPrice
-                && item.price >= minPrice
-            ) {
-                var itemHtml = createItemHtml(item);
-                $catalog.append(itemHtml);
-            }
-        });
-    }).fail(function() { 
-        alert('Ошибка загрузки!'); 
-    })
-});
+$filterMinPrice.on('click', onClickFilter);
+$filterMaxPrice.on('click', onClickFilter);
 
 $filterNew.on('click', function(event) {
     event.preventDefault;
-    $filterNav.find($('a')).removeClass('active');
-    $(this).addClass('active');
-    
-    $catalog.empty();
+
+    var $this = $(this);
+
+    highlightSortButton($this);
     
     $.getJSON(dataUrl).done(function(data) {
         var power = $('input[type=radio]:checked').val();
@@ -225,21 +196,13 @@ $filterNew.on('click', function(event) {
         var brands = $.map($checkedBrands, function(element) {
             return element.value; 
         });
+        
+        $catalog.empty();
 
         $.each(data, function(index, item) {
-            if (power === item.power 
+            if ([item.power, 'any'].indexOf(power) > -1
                 && brands.indexOf(item.brand) > -1
-                && item.price <= maxPrice
-                && item.price >= minPrice
-                && item.new === true
-            ) {
-                var itemHtml = createItemHtml(item);
-                $catalog.append(itemHtml);
-            } 
-            if (power === 'any'
-                && brands.indexOf(item.brand) > -1
-                && item.price <= maxPrice
-                && item.price >= minPrice
+                && inRange(item.price, minPrice, maxPrice)
                 && item.new === true
             ) {
                 var itemHtml = createItemHtml(item);
@@ -254,12 +217,10 @@ $filterNew.on('click', function(event) {
 $filterReset.on('click', function(event) {
     event.preventDefault;
 
-    $filterNav.find($('a')).removeClass('active');
-    $(this).addClass('active');
-
-    $catalog.empty();
+    highlightSortButton($(this));
 
     $.getJSON(dataUrl).done(function(data) {
+        $catalog.empty();
         $.each(data, function(index, item) {
             var itemHtml = createItemHtml(item);
             $catalog.append(itemHtml);
