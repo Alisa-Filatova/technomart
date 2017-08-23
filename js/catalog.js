@@ -130,6 +130,10 @@ $filterBtn.on('click', function(event) {
                 $catalog.find('.item').not('.new').remove();
             }
         });
+
+        if ($('.item').length <= 0) {
+            $catalog.append('<div class="item__not-found">Не найдено! Измените запрос.</div>');
+        }
     }).fail(function() { 
         alert('Ошибка загрузки!'); 
     })
