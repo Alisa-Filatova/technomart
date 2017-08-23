@@ -44,6 +44,8 @@ function inRange(number, start, end) {
     return number >= start && number <= end;
 }
 
+// Стартовая загрузка товаров 
+
 $(function() {
     $.getJSON(dataUrl).done(function(data) {
         $.each(data, function(index, item) {
@@ -55,6 +57,9 @@ $(function() {
     })
 });
 
+/**
+ * Выделяет активную кнопку сортировки
+ */
 function highlightSortButton($sortButton) {
     $sortButton
         .closest('ul')
@@ -64,12 +69,9 @@ function highlightSortButton($sortButton) {
     $sortButton.addClass('active');
 }
 
-// Фильтр
-
-var $filterBtn = $('.filter-btn');
-var $minPrice = $('#min-price');
-var $maxPrice = $('#max-price');
-
+/**
+ * Сотрировка товаров по цене
+ */
 function sortItemsByPriceMin(array) {
     array.sort(function (min, max) {
         return min.price - max.price;
@@ -81,6 +83,12 @@ function sortItemsByPriceMax(array) {
         return max.price - min.price;
     });
 };
+
+// Фильтр
+
+var $filterBtn = $('.filter-btn');
+var $minPrice = $('#min-price');
+var $maxPrice = $('#max-price');
 
 $filterBtn.on('click', function(event) {
     event.preventDefault();
@@ -111,7 +119,6 @@ $filterBtn.on('click', function(event) {
         }
 
         $.each(data, function(index, item) {
-            
             if ([item.power, 'any'].indexOf(power) > -1
                 && brands.indexOf(item.brand) > -1
                 && inRange(item.price, minPrice, maxPrice)
@@ -128,14 +135,15 @@ $filterBtn.on('click', function(event) {
     })
 });
 
-// Cортировка товаров
-
 var $filterMinPrice = $('.filter-min');
 var $filterMaxPrice = $('.filter-max');
 var $filterNew = $('.filter-new');
 var $filterReset = $('.filter-reset');
 var $filterNav = $('.products-filter-nav');
 
+/**
+ * Загрузка товаров в соответствии с настройками сортировки
+ */
 function onClickFilter(event) {
     event.preventDefault;
 
@@ -179,6 +187,8 @@ function onClickFilter(event) {
 $filterMinPrice.on('click', onClickFilter);
 $filterMaxPrice.on('click', onClickFilter);
 
+// Загрузка только товаров-новинок
+
 $filterNew.on('click', function(event) {
     event.preventDefault;
 
@@ -213,6 +223,8 @@ $filterNew.on('click', function(event) {
         alert('Ошибка загрузки!'); 
     })
 });
+
+// Сброс настроек фильтра
 
 $filterReset.on('click', function(event) {
     event.preventDefault;
