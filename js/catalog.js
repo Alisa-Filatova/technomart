@@ -48,6 +48,7 @@ function inRange(number, start, end) {
 
 $(function() {
     $.getJSON(dataUrl).done(function(data) {
+        
         $.each(data, function(index, item) {
             var itemHtml = createItemHtml(item);
             $catalog.append(itemHtml);
